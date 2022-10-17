@@ -8,7 +8,7 @@ console.log('environment:::::', environment);
 let ENVIRONMENT_VARIABLES = {
   'process.env.ENVIRONMENT': JSON.stringify('development'),
   'process.env.PORT': JSON.stringify('3080'),
-  'process.env.MONGO_URL': JSON.stringify('mongodb://mongo-db:27017')
+  'process.env.MONGO_URL': JSON.stringify('mongodb://localhost:27017')
 };
 
 if (environment === 'test') {
