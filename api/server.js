@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 console.log('environment    ', process.env.ENVIRONMENT)
 console.log('PORT    ', process.env.PORT)
-console.log('MONGO_CONNECTION_STRING    ', process.env.MONGO_CONNECTION_STRING)
+console.log('MONGO_URL    ', process.env.MONGO_URL)
 if(process.env.ENVIRONMENT !== 'production') {
     require('dotenv').config()
 }

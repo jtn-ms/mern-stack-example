@@ -11,7 +11,7 @@ COPY api/ ./api/
 RUN cd api && npm install && ENVIRONMENT=test npm run build
 RUN ls
 
-# Stage3: Packagign the app
+# Stage3: Packaging the app
 FROM node:16
 WORKDIR /root/
 COPY --from=ui-build /usr/src/ui/build ./ui/build

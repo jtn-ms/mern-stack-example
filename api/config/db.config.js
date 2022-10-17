@@ -3,8 +3,8 @@ const logger = require('../logger/api.logger');
 
 const connect = () => {
 
-    const url = process.env.MONGO_CONNECTION_STRING;
-    logger.info("process.env.MONGO_CONNECTION_STRING :::" + process.env.MONGO_CONNECTION_STRING);
+    const url = process.env.MONGO_URL;
+    logger.info("process.env.MONGO_URL :::" + process.env.MONGO_URL);
 
     mongoose.connect(url, {
         useNewUrlParser: true,

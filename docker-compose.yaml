@@ -4,15 +4,16 @@ services:
   ui:
    build:
       context: ./ui
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
    ports:
     -  3000:3000
-   container_name: mern-ui
+   container_name: mern-ui-lightweight
    networks:
     -  mern-stack-net
    volumes:
     -  ./ui/src:/usr/app/src
     -  ./ui/public:/usr/app/public
+    # -  ./ui/node_modules:/usr/app/node_modules
    depends_on:
     - api
    stdin_open: true
@@ -23,14 +24,15 @@ services:
   api:
    build:
       context: ./api
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
    ports:
      - 3080:3080
-   container_name: mern-api
+   container_name: mern-api-lightweight
    networks:
      - mern-stack-net
    volumes:
     - ./api/src:/usr/app/src
+    # - ./api/node_modules:/usr/app/node_modules
    depends_on:
     - mongo
 
