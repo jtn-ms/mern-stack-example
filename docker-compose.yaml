@@ -17,6 +17,8 @@ services:
     - api
    stdin_open: true
    tty: true
+   entrypoint: ["npm","start"]
+  #  command: bash -c "npm start"
 
   api:
    build:
