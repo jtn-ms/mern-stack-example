@@ -14,4 +14,6 @@ run.frontend:
 run.backend:
 	@cd backend; npm start; cd -
 
-run.webpack: run.db run.frontend run.backend
+run.full: run.frontend run.backend
+
+run.all: run.db run.full
