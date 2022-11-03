@@ -1,3 +1,10 @@
+branch=templates/graphql
+
+
+checkout:
+	@cd frontend; git checkout ${branch}; cd -
+	@cd backend; git checkout ${branch}; cd -
+
 install:
 	@cd frontend; npm i; cd -
 	@cd backend; npm i; cd -
