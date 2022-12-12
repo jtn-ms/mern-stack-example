@@ -2,7 +2,9 @@
 	path = frontend
 	url = git@github.com:jtn-ms/react-template.git
 	branch = templates/jwt
+	ignore = dirty
 [submodule "backend"]
 	path = backend
 	url = git@github.com:jtn-ms/nodejs-template.git
 	branch = templates/jwt
+	ignore = dirty
