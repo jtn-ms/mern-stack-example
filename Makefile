@@ -1,5 +1,5 @@
 pull.submodules:
-	@git submodules update --init --recursive
+	@git submodule update --init --recursive
 
 install:
 	@cd frontend; npm i; cd -
